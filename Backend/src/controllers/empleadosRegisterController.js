@@ -2,6 +2,8 @@ import empleadosModel from "../models/empleados.js";
 import { config } from "../config.js";
 import bcryptjs from "bcryptjs"
 import jsonwebtoken from "jsonwebtoken"; // Token
+import express from "express";
+
 
 const registrarEmpleadosController = {}
 
@@ -65,7 +67,7 @@ jsonwebtoken.sign(
       if (error) console.log("error");
 
       res.cookie("authToken", token);
-      res.json({ message: "Employee registed" });
+      res.json({ message: "Employee registrado" });
     }
   );
   
